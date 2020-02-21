@@ -5,9 +5,7 @@ const chai = require('chai');
 const expect = chai.expect;
 
 describe('First Api Tests', () => {
-});
-
-it('Consume GET Service', async () => {
+  it('Consume GET Service', async () => {
     const response = await agent.get('https://httpbin.org/ip');
   
     expect(response.status).to.equal(statusCode.OK);
@@ -49,8 +47,9 @@ it('Consume GET Service', async () => {
   });
 
   it('Consume DELETE Service', async () => {
-    const response = await agent.delete('https://httpbin.org/delete');
+    const response = await agent.del('https://httpbin.org/delete');
 
     expect(response.status).to.equals(statusCode.OK);
     expect(response.body).have.property('origin');
   });
+});
