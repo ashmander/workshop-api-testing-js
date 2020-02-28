@@ -5,7 +5,7 @@ const { expect } = require('chai');
 const urlBase = 'https://api.github.com';
 const githubUserName = 'ashmander';
 const repository = 'workshop-api-testing-js';
-const token = proces.env.ACCESS_TOKEN;
+const token = process.env.ACCESS_TOKEN;
 
 describe('Github Api Test', () => {
   describe('Authentication', () => {
